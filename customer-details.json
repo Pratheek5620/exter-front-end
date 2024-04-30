@@ -1,0 +1,27 @@
+[
+    {
+      "Name": "John Doe",
+      "CustomerCode": "A12"
+
+    },
+    {
+      "Name": "Jane Smith",
+      "Customercode": "D23"
+    },
+    {
+      "Name": "Michael Jones",
+      "Customercode": "G34"
+    },
+    {
+      "Name": "Sarah Miller",
+      "Customercode": "J45"
+    },
+    {
+      "Name": "William Johnson",
+      "Customercode": "M56"
+    },
+    {
+      "Name": "Elizabeth Walker",
+      "Customercode": "P67"
+    }
+]
