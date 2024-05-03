@@ -17,7 +17,7 @@ const getHostname = () => {
     return 'localhost'; // Assuming localhost for development
   } else {
     // For production or staging, use the actual hostname
-    return window.location.host; // Access window.location.host here (only available in the browser)
+    return typeof window!== 'undefined' ? window.location.host : ''; // Access window.location.host here (only available in the browser)
   }
 };
 
