@@ -83,8 +83,8 @@ const FormApp: React.FC = () => {
   };
 
   useEffect(() => {
-    // console.log(formValues.OrderServiceData?.NextSerial);
-    // console.log(formValues.OrderServiceData?.NextOrder);
+    // console.log(formValues.OrderServiceData?.nextSerial);
+    // console.log(formValues.OrderServiceData?.nextOrder);
   }, [formValues]);
 
   useEffect(() => {
@@ -321,12 +321,12 @@ const FormApp: React.FC = () => {
                     rules={[{ required: true, message: "Please select!" }]}
                   >
                     <Select style={{ width: "100%" }} disabled={loading}>
-                      {formValues.OrderServiceData?.NextOrder && (
+                      {formValues.OrderServiceData?.nextOrder && (
                         <Option
-                          key={formValues.OrderServiceData?.NextOrder}
-                          value={formValues.OrderServiceData?.NextOrder}
+                          key={formValues.OrderServiceData?.nextOrder}
+                          value={formValues.OrderServiceData?.nextOrder}
                         >
-                          {formValues.OrderServiceData.NextOrder}
+                          {formValues.OrderServiceData.nextOrder}
                         </Option>
                       )}
                     </Select>
@@ -339,27 +339,30 @@ const FormApp: React.FC = () => {
                     rules={[{ required: true, message: "Please select!" }]}
                   >
                     <Select style={{ width: "100%" }} disabled={loading}>
-                      {formValues.OrderServiceData?.NextSerial && (
+                      {formValues.OrderServiceData?.nextSerial && (
                         <Option
-                          key={formValues.OrderServiceData?.NextSerial}
-                          value={formValues.OrderServiceData?.NextSerial}
+                          key={formValues.OrderServiceData?.nextSerial}
+                          value={formValues.OrderServiceData?.nextSerial}
                         >
-                          {formValues.OrderServiceData.NextSerial}
+                          {formValues.OrderServiceData.nextSerial}
                         </Option>
                       )}
                     </Select>
                   </Form.Item>
                 </span>
+
                 <span
-                  style={{ flex: "0 0 calc(50% - 10px)", paddingTop: "30px" }}
+                  style={{ flex: "0 0 calc(50% - 10px)", paddingTop: "0px" }}
                 >
-                  <InputNumber
-                    min={1}
-                    max={50}
-                    defaultValue={1}
-                    onChange={onChangeInputNumber}
-                    changeOnWheel
-                  />
+                  <Form.Item label="* Bulk Input Number">
+                    <InputNumber
+                      min={1}
+                      max={100}
+                      defaultValue={1}
+                      onChange={onChangeInputNumber}
+                      changeOnWheel
+                    />
+                  </Form.Item>
                 </span>
               </div>
               <Button
