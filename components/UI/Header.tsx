@@ -11,11 +11,7 @@ const Header: React.FC<HeaderProps> = () => {
             height={100}
             priority/>
       </div>
-      {/* <nav className="flex space-x-4">
-        <a href="/" className="hover:text-gray-400 text-white">Home</a>
-        <a href="/about" className="hover:text-gray-400 text-white">About</a>
-        <a href="/contact" className="hover:text-gray-400 text-white">Contact</a>
-      </nav> */}
+
     </header>
   );
 };

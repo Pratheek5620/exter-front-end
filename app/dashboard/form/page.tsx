@@ -1,6 +1,6 @@
 import FormApp from "@/components/form";
 
-const Form = () => {
+const SerialCodeForm = () => {
     return ( 
         <div className="justify center">
             <FormApp />
@@ -8,4 +8,4 @@ const Form = () => {
      );
 }
  
-export default Form;
+export default SerialCodeForm;

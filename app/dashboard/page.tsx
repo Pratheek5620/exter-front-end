@@ -1,9 +1,11 @@
-import CustomerListApp from '@/components/UI/customer-list';
+
+
+import BatteryServiceCharts from "../../components/UI/charts";
 
 function DashboardPage() {
   return (
     <div>
-      <CustomerListApp />
+      <BatteryServiceCharts />
     </div>
   );
 }

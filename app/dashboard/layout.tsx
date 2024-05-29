@@ -6,6 +6,7 @@ import {
     AppstoreOutlined,
     MenuFoldOutlined,
     MenuUnfoldOutlined,
+    ShoppingCartOutlined,
 } from '@ant-design/icons';
 import { Layout, Menu, Button, theme, MenuProps } from 'antd';
 import Link from 'next/link';
@@ -42,15 +43,23 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         getItem(<nav>
           <Link onClick={handleAboutClick} href={'/dashboard/form'}>Generate Serial Code</Link>
         </nav>, '1', <AppstoreOutlined />),
-        // ... other items
-      ];
+        
+        getItem(
+            <nav>
+                <Link href={'/dashboard/Orders'}>Orders</Link>
+            </nav>,'2',<ShoppingCartOutlined />
+        )
+    ];
 
     return (
         <Layout style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
             <Header style={{ padding: 0, background: colorBgContainer, width: '100%', zIndex: 1, display: 'flex', alignItems: 'center', backgroundColor: '#13322B ' }}>
-                <Image src={"/vivitron_logo.png"} alt={"logo"} width={150}
-                    height={100}
-                    priority />
+                <a href={'/dashboard'}>
+                    <Image src={"/vivitron_logo.png"} alt={"logo"} width={150}
+                        height={100}
+                        priority
+                    />
+                </a>
                 <Button
                     type="text"
                     icon={collapsed ? <MenuFoldOutlined style={{ color: '#ffff' }} /> : <MenuUnfoldOutlined style={{ color: '#ffff' }} />}
