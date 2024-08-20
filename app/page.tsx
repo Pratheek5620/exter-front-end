@@ -2,8 +2,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 
 import LoginPage from "./login/page";
-import Header from "@/components/UI/Header";
-import Footer from "@/components/UI/Footer";
 import { useEffect } from "react";
 import { getApiUrl } from "./apiConstant";
 
@@ -23,11 +21,10 @@ export default function Home() {
   return (
     <div>
       <ChakraProvider>
-        <Header />
         <div>
           <LoginPage />
         </div>
-        <Footer />
+
       </ChakraProvider>
     </div>
   );
