@@ -2,6 +2,7 @@
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState, createContext, useContext } from 'react';
 import store from 'store';
+import { Spin } from 'antd';
 
 type AuthContextType = {
   isAuthenticated: boolean;
@@ -26,7 +27,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setLoading(false);
   }, [router]);
 
-  if (loading) return <div>Loading...Please wait!</div>;
+  if (loading) return <Spin />;
 
   return (
     <AuthContext.Provider value={{ isAuthenticated, loading }}>

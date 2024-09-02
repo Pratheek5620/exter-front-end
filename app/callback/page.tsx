@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { handleCallback } from '../../helpers/auth_helper';
+import { Spin } from 'antd';
 
 const CallbackPage = () => {
   const router = useRouter();
@@ -16,11 +17,11 @@ const CallbackPage = () => {
       });
   }, [router]);
 
-  return <div>
-    <h1>
-      Loading...please wait
-    </h1>
-  </div>;
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <Spin tip="Loading...please wait" />
+    </div>
+  );
 };
 
 export default CallbackPage;
